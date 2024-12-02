@@ -1,0 +1,2 @@
+Drop DATABASE IF EXISTS schedule;
+CREATE DATABASE schedule;

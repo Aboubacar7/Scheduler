@@ -1,0 +1,25 @@
+<div class="schedule">
+    <div style="text-decoration: none !important;">
+        <div class="post-content" style="border: solid; border-color: black; margin-top: 20px; margin-left: 5%; margin-right: 5%; width: 90%; max-width: 800px; border-radius: 5px; background-color: #f0f0f0;">
+            <div class="title" style="display: flex; justify-content: space-between; background-color: rgb(108, 178, 219); align-items: center; color: antiquewhite; padding: 10px;">
+                <h2 style="font-size: x-large;">Create New Schedule</h2>
+            </div>
+            <form action="/api/newschedule" method="POST" style="padding: 10px;">
+                <div style="margin-bottom: 15px;">
+                    <label for="title" style="font-size: large; color: black;">Title:</label>
+                    <input type="text" id="title" name="title" required style="width: 98%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="description" style="font-size: large; color: black;">Description:</label>
+                    <textarea id="description" name="description" required style="width: 98%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="username" style="font-size: large; color: black;">Username:</label>
+                    <input type="text" id="username" name="username" required style="width: 98%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                </div>
+                <button type="submit" style="background-color: rgb(108, 178, 219); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Create Schedule</button>
+            </form>
+        </div>
+    </div>
+</div>
+

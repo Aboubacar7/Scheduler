@@ -1,0 +1,34 @@
+<!-- edit-schedule.handlebars -->
+<div class="content mt-5 ml-5" style="border: solid; width: 800px; height: auto;">
+    <div class="title" style="font-size: 30px; background-color: rgb(112, 66, 66); color: #fff; padding: 10px;">
+        Edit Schedule
+    </div>
+    <form id="schedule-edit-form" class="edit-post" style="background-color: rgb(165, 190, 190); padding: 20px;">
+        <input type="hidden" name="schedule-id" id="schedule-id" value="{{schedule.id}}" />
+
+        <div class="form-group text" style="margin-left: 20px; margin-bottom: 15px;">
+            <label for="title" class="text-light" style="display: block; color: #000;">Title</label>
+            <input class="form-input" type="text" style="width: 100%; padding: 6px;" id="edit-title" name="title" value="{{schedule.title}}" />
+        </div>
+
+        <div class="form-group text" style="margin-left: 20px; margin-bottom: 15px;">
+            <label for="description" class="text-light" style="display: block; color: #000;">Description</label>
+            <textarea class="form-input" style="width: 100%; padding: 10px;" id="edit-description" name="description">{{schedule.description}}</textarea>
+        </div>
+
+        <div class="form-group text" style="margin-left: 20px; margin-bottom: 15px;">
+            <label for="username" class="text-light" style="display: block; color: #000;">Username</label>
+            <input class="form-input" type="text" style="width: 100%; padding: 6px;" id="edit-username" name="username" value="{{schedule.username}}" />
+        </div>
+
+        <button id="update-btn" type="submit" class="btn-primary m-2" style="width: 100%; padding: 10px; background-color: rgb(108, 178, 219); color: white;">
+            Update Schedule
+        </button>
+
+        <button id="delete-btn" type="button" class="btn-primary m-2" style="width: 100%; padding: 10px; background-color: red; color: white; margin-top: 10px;">
+            Delete
+        </button>
+    </form>
+</div>
+
+<script src="/js/edit.js"></script>

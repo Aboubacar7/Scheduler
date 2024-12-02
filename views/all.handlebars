@@ -1,0 +1,42 @@
+<!-- Schedule List -->
+<div class="schedule">
+  {{#each schedules as |schedule|}}
+    <div class="schedule-item" 
+         data-id="{{schedule.id}}" 
+         data-title="{{schedule.title}}" 
+         data-description="{{schedule.description}}" 
+         data-username="{{schedule.username}}"
+         style="text-decoration: none !important; cursor: pointer;">
+      <div class="post-content" style="border: solid; border-color: black; margin-top: 20px; margin-left: 5%; margin-right: 5%; width: 90%; max-width: 800px; border-radius: 5px; background-color: #f0f0f0;">
+        <div class="title" style="display: flex; justify-content: space-between; background-color: rgb(108, 178, 219); align-items: center; color: antiquewhite; padding: 10px;">
+          <div style="font-size: x-large;">{{schedule.title}}</div>
+          <span style="font-size: 15px;">Posted by {{schedule.username}} on {{format_date schedule.created_on}}</span>
+        </div>
+        <p style="color: black; padding: 10px;">{{schedule.description}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<!-- Edit Slide-In Cart -->
+<div id="edit-cart" class="edit-cart" style="display: none;">
+  <h2>Edit Schedule</h2>
+  <form id="schedule-edit-form">
+    <input type="hidden" id="schedule-id" name="schedule-id">
+    <label for="edit-title">Title:</label>
+    <input type="text" id="edit-title" name="title">
+
+    <label for="edit-description">Description:</label>
+    <textarea id="edit-description" name="description"></textarea>
+
+    <label for="edit-username">Username:</label>
+    <input type="text" id="edit-username" name="username">
+
+    <button type="submit">Save Changes</button>
+    <button id="delete-btn" type="button" class="btn-primary m-2" style="width: 100%; padding: 10px; background-color: red; color: white; margin-top: 10px;">
+            Delete
+        </button>
+  </form>
+</div>
+
+<script src="/js/edit.js"></script>
