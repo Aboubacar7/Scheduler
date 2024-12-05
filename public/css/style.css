@@ -4,8 +4,10 @@ body {
     margin: 0;
     background-image: url('https://img.freepik.com/free-photo/close-up-calendar-design_23-2149239431.jpg');
     background-size: cover; 
-    background-position: center; 
+    background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .nav {
