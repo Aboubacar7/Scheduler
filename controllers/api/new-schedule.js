@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
       console.log('New Schedule Created:', scheduleData);
   
       // Redirect back to a relevant page after success
-      res.status(201).redirect('/dashboard'); // Redirect to dashboard or relevant page
+      res.status(201).redirect('/'); // Redirect to dashboard or relevant page
     } catch (err) {
       console.error('Error creating schedule:', err);
       res.status(500).render('error', { error: 'Failed to create schedule.' }); // Render error page or send JSON
